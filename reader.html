@@ -21,7 +21,6 @@
     <div class="reader-header__inner">
       <div class="reader-header__top">
         <a class="breadcrumb" href="index.html">&larr; Plain Style library</a>
-        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Dark mode</button>
       </div>
       <div>
         <h1 id="work-title">Loading…</h1>
@@ -40,13 +39,19 @@
     <div class="text-column">
       <div class="sticky-bar" id="sticky-bar">
         <div class="sticky-bar__row">
-          <p class="column-label" id="original-label">Original</p>
-          <div class="sticky-bar__modern">
+          <div class="sticky-bar__left">
+            <button type="button" class="toc-toggle" id="toc-toggle" aria-label="Open table of contents" aria-expanded="false" aria-controls="toc-drawer">
+              <span></span><span></span><span></span>
+            </button>
+            <p class="column-label" id="original-label">Original</p>
+          </div>
+          <div class="sticky-bar__right">
             <p class="column-label">Modern English</p>
             <div class="level-toggle" id="level-toggle" role="group" aria-label="Modernization level">
               <button type="button" data-level="light" aria-pressed="true">Light</button>
               <button type="button" data-level="heavy" aria-pressed="false">Heavy</button>
             </div>
+            <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Dark mode</button>
           </div>
         </div>
         <p class="level-note" id="level-note"></p>
@@ -56,7 +61,19 @@
     </div>
   </div>
 
-  <script src="js/data.js"></script>
+  <div class="toc-drawer" id="toc-drawer" aria-hidden="true">
+    <div class="toc-drawer__backdrop" id="toc-drawer-backdrop"></div>
+    <div class="toc-drawer__panel" role="dialog" aria-label="Table of contents">
+      <div class="toc-drawer__head">
+        <button type="button" class="toc-drawer__close" id="toc-drawer-close" aria-label="Close table of contents">&times;</button>
+      </div>
+      <nav class="contents" aria-label="Sections">
+        <p class="contents__label">Contents</p>
+        <ol id="toc-drawer-list"></ol>
+      </nav>
+    </div>
+  </div>
+
   <script src="js/reader.js"></script>
   <script src="js/theme.js"></script>
 </body>

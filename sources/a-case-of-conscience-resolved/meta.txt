@@ -1,0 +1,8 @@
+slug: a-case-of-conscience-resolved
+title: A Case of Conscience Resolved
+subtitle: Whether it is the duty of women, ordinarily and by appointment, to separate from their brethren to pray together without their men
+author: John Bunyan
+date: 1683
+sourceNote: Text Creation Partnership (EEBO-TCP) old-spelling transcription, from a copy held by the University of Michigan Library, dedicated to the public domain under CC0.
+sourceUrl: https://ota.bodleian.ox.ac.uk/repository/xmlui/handle/20.500.12024/A30127
+signature: John Bunyan.

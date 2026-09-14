@@ -1,0 +1,8 @@
+slug: directory-for-family-worship
+title: The Directory for Family Worship
+subtitle: Directions concerning secret and private worship, and mutual edification
+author: The Westminster Assembly / Church of Scotland
+date: 1647
+sourceNote: Approved by the General Assembly at Edinburgh, 24 August 1647, Session 10.
+sourceUrl: https://thewestminsterstandard.org/directory-for-family-worship/
+signature: A. Ker.
