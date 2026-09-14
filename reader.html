@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reader — Plain Style</title>
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('plainstyle-theme');
+        var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="reader-header">
+    <div class="reader-header__inner">
+      <div class="reader-header__top">
+        <a class="breadcrumb" href="index.html">&larr; Plain Style library</a>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Dark mode</button>
+      </div>
+      <div>
+        <h1 id="work-title">Loading…</h1>
+        <p class="reader-header__subtitle" id="work-subtitle"></p>
+        <p class="reader-header__byline" id="work-byline"></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="reader-body">
+    <nav class="contents" id="contents" aria-label="Sections">
+      <p class="contents__label">Contents</p>
+      <ol id="contents-list"></ol>
+    </nav>
+
+    <div class="text-column">
+      <div class="sticky-bar" id="sticky-bar">
+        <div class="sticky-bar__row">
+          <p class="column-label" id="original-label">Original</p>
+          <div class="sticky-bar__modern">
+            <p class="column-label">Modern English</p>
+            <div class="level-toggle" id="level-toggle" role="group" aria-label="Modernization level">
+              <button type="button" data-level="light" aria-pressed="true">Light</button>
+              <button type="button" data-level="heavy" aria-pressed="false">Heavy</button>
+            </div>
+          </div>
+        </div>
+        <p class="level-note" id="level-note"></p>
+      </div>
+
+      <main class="sections" id="sections"></main>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/reader.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

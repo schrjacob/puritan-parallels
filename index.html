@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plain Style — a Puritan reading library</title>
+  <meta name="description" content="Puritan works in their original English, alongside a modernized text you can read at a lighter or heavier degree of modernization.">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('plainstyle-theme');
+        var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-mark" href="index.html">Plain <span>Style</span></a>
+      <div class="site-header__right">
+        <nav class="site-nav">a Puritan reading library</nav>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false">Dark mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="library">
+    <div class="library__intro">
+      <h1>Read the Puritans as they wrote, and as we'd write it now.</h1>
+      <p>Each work here is shown in its original English, set beside a modernized
+        text. Where the original is dense or unfamiliar, the modern text is there
+        to help — but the original stays in view, so nothing is taken on faith.</p>
+      <p>Every reader has a toggle for how far the modernization goes: a
+        lighter, close-to-the-original rendering, or a fuller rewrite into
+        plain contemporary English.</p>
+    </div>
+
+    <div id="work-list" class="work-list"></div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/library.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
