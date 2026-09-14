@@ -1,6 +1,6 @@
 (function () {
   const listEl = document.getElementById('work-list');
-  const slugs = Object.keys(WORKS);
+  const slugs = Object.keys(MANIFEST);
 
   if (slugs.length === 0) {
     listEl.innerHTML = '<p class="library__empty">No works added yet.</p>';
@@ -8,7 +8,7 @@
   }
 
   listEl.innerHTML = slugs.map(function (slug) {
-    const work = WORKS[slug];
+    const work = MANIFEST[slug];
     return (
       '<a class="work-card" href="reader.html?work=' + encodeURIComponent(slug) + '">' +
         '<div>' +
